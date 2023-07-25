@@ -43,7 +43,7 @@ const Form = () => {
             onChange={(e) => setOtp(e.target.value)}
           />
 
-          <button type="submit">SEND TOKENS</button>
+          <button type="submit" className="send-token-button">SEND TOKENS</button>
         </div>
       </form>
     </div>

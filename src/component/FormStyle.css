@@ -19,3 +19,15 @@
   flex-direction: column;
   
 }
+
+.send-token-button{
+  border: none;
+  padding: 9px 12px;
+  background: #FF2849;
+  color: white;
+  border-radius: 30px;
+}
+
+.send-token-button:hover{
+  background-color: #E52441;
+}
