@@ -10,14 +10,20 @@
 .form-container {
   align-items: flex-start;
   justify-content: center;
-  width: 100%;
+  width: 600px;
+  height: 600px;
   padding: 1rem;
   box-sizing: border-box;
   border-radius: 30px;
   border: 1px solid #ccc;
   display:flex;
   flex-direction: column;
+  gap: 5px;
   
+}
+
+.input-field {
+  margin-bottom: 20px;
 }
 
 .send-token-button{

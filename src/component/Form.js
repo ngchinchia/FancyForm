@@ -24,7 +24,9 @@ const Form = () => {
             type="text"
             id="input-address"
             value={ethAddress}
-            onChange={(e) => setEthAddress(e.target.value)}
+            onChange={(e) => setEthAddress(e.target.value)
+            }
+            className="input-field"
           />
 
           <label htmlFor="input-amount">Amount to send</label>
@@ -33,6 +35,7 @@ const Form = () => {
             id="input-amount"
             value={amountToSend}
             onChange={(e) => setAmountToSend(e.target.value)}
+            className="input-field"
           />
 
           <label htmlFor="input-otp">OTP Authentication</label>
@@ -41,6 +44,7 @@ const Form = () => {
             id="input-otp"
             value={otp}
             onChange={(e) => setOtp(e.target.value)}
+            className="input-field"
           />
 
           <button type="submit" className="send-token-button">SEND TOKENS</button>
