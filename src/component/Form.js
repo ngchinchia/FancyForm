@@ -18,18 +18,19 @@ const Form = () => {
   return (
     <div className="main-container">
       <form onSubmit={handleSubmit}>
-        <div className="form-container">
-          <label htmlFor="input-address">ETH Address</label>
+      <div className="form-container">
+        <div className="input-box">
           <input
             type="text"
             id="input-address"
             value={ethAddress}
-            onChange={(e) => setEthAddress(e.target.value)
-            }
+            onChange={(e) => setEthAddress(e.target.value)}
             className="input-field"
           />
+          <span className="place-holder">ETH Address</span>
+        </div>
 
-          <label htmlFor="input-amount">Amount to send</label>
+        <div className="input-box">
           <input
             type="text"
             id="input-amount"
@@ -37,8 +38,10 @@ const Form = () => {
             onChange={(e) => setAmountToSend(e.target.value)}
             className="input-field"
           />
+          <span className="place-holder">Amount to send</span>
+        </div>
 
-          <label htmlFor="input-otp">OTP Authentication</label>
+        <div className="input-box">
           <input
             type="number"
             id="input-otp"
@@ -46,9 +49,15 @@ const Form = () => {
             onChange={(e) => setOtp(e.target.value)}
             className="input-field"
           />
-
-          <button type="submit" className="send-token-button">SEND TOKENS</button>
+          <span className="place-holder">OTP Authentication</span>
         </div>
+
+        <div className="input-box">
+        <button type="submit" className="send-token-button">
+          SEND TOKENS
+        </button>
+        </div>
+      </div>
       </form>
     </div>
   );

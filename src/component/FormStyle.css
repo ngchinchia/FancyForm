@@ -1,32 +1,74 @@
-.main-container{
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+.main-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: linear-gradient(#141e30, #243b55);
+
+}
+
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  width: 20vw;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+  background: rgba(18, 17, 17, 0.5);
+ 
+  
+}
+
+
+.input-box {
+  position: relative;
+  width: 250px;
+  padding: 25px 5px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  outline:auto;
+  border-radius: 10px;
+  font-size: large;
   color: black;
 
 }
 
-.form-container {
-  align-items: flex-start;
-  justify-content: center;
-  width: 600px;
-  height: 600px;
-  padding: 1rem;
-  box-sizing: border-box;
-  border-radius: 30px;
-  border: 1px solid #ccc;
-  display:flex;
-  flex-direction: column;
-  gap: 5px;
+.place-holder {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  font-size: large;
+  color: black;
+}
+
+
+.input-field:focus+.place-holder {
+  color: #00dfc4;
+  transform: translateY(-40px);
+  border-left: 1px solid #00dfc4;
+  
   
 }
 
-.input-field {
-  margin-bottom: 20px;
-}
 
-.send-token-button{
+
+.send-token-button {
   border: none;
   padding: 9px 12px;
   background: #FF2849;
@@ -34,6 +76,6 @@
   border-radius: 30px;
 }
 
-.send-token-button:hover{
+.send-token-button:hover {
   background-color: #E52441;
 }
