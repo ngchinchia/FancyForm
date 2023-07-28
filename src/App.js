@@ -1,10 +1,12 @@
 
 import './App.css';
-import Form from './component/Form';
+import SolutionForm from './component/SolutionForm';
+
+
 
 function App() {
   return (
-   <div><Form/></div>
+   <div><SolutionForm/></div>
   );
 }
 

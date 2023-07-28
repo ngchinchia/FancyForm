@@ -4,16 +4,14 @@
   box-sizing: border-box;
 }
 
-
 .main-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 0 20px;
   background: linear-gradient(#141e30, #243b55);
-
 }
-
 
 .form-container {
   display: flex;
@@ -21,30 +19,31 @@
   justify-content: center;
   align-items: center;
   height: 60vh;
-  width: 20vw;
+  width: 100%;
+  max-width: 400px;
   box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
   border-radius: 10px;
   background: rgba(18, 17, 17, 0.5);
- 
-  
+  padding: 50px;
 }
-
 
 .input-box {
   position: relative;
-  width: 250px;
-  padding: 25px 5px;
+  width: 100%;
+  max-width: 250px;
+  padding: 25px 0;
 }
 
 .input-field {
   width: 100%;
   padding: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  outline:auto;
+  border: 1px solid #00dfc4;
+  outline: none;
   border-radius: 10px;
-  font-size: large;
-  color: black;
+  font-size: small;
+  color: #00dfc4;
+  background: transparent;
 
 }
 
@@ -53,29 +52,27 @@
   left: 0;
   padding: 10px;
   pointer-events: none;
-  font-size: large;
-  color: black;
+  font-size: small;
+  color: #00dfc4;
+  /* background-color: white; */
+  transition: 0.5s
+  
 }
-
 
 .input-field:focus+.place-holder {
   color: #00dfc4;
   transform: translateY(-40px);
   border-left: 1px solid #00dfc4;
-  
-  
 }
-
-
-
 .send-token-button {
   border: none;
   padding: 9px 12px;
-  background: #FF2849;
+  background:  #00a695;
+  font-size: small;
   color: white;
-  border-radius: 30px;
+  border-radius: 5px;
 }
 
 .send-token-button:hover {
-  background-color: #E52441;
+  background-color: #00dfc4;
 }
