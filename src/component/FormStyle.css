@@ -76,3 +76,9 @@
 .send-token-button:hover {
   background-color: #00dfc4;
 }
+
+.error-eth {
+  color: red;
+  font-size: small;
+
+}

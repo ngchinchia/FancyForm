@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React  from "react";
 import { Formik, Form, Field } from "formik";
-import "./FormStyle.css"; // Make sure to have the CSS file in the same directory as this component
+import{ FormSchema } from "../schema/FormValidationSchema"
+import "./FormStyle.css"; 
 
 const SolutionForm = () => {
-  // State to manage form input values
-  const [ethAddress, setEthAddress] = useState("");
-  const [amountToSend, setAmountToSend] = useState("");
-  const [otp, setOtp] = useState("");
+ 
 
 
 
@@ -18,15 +16,22 @@ const SolutionForm = () => {
           inputAmount: "",
           otpAuthentication: "",
         }}
+        validationSchema={FormSchema}
         onSubmit={(values) => {
           // same shape as initial values
           console.log(values);
         }}
       >
+       {({ errors, touched }) => (
+      <Form>
         <div className="form-container">
           <div className="input-box">
-            <Field name="ethAddress" className="input-field" />
+            <Field name="ethAddress" className="input-field" 
+            onFocus={() => handleEthFocus} />
             <span className="place-holder">ETH Address</span>
+            {errors.ethAddress && touched.ethAddress ? (
+             <div className="error-eth">{errors.ethAddress}</div>
+           ) : null}
           </div>
 
           <div className="input-box">
@@ -45,6 +50,8 @@ const SolutionForm = () => {
             </button>
           </div>
         </div>
+        </Form>
+        )}
       </Formik>
     </div>
   );
