@@ -1,8 +1,20 @@
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  /* Applying Inter Extra Light to the entire document */
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+
+.app-title {
+  color: #00dfc4;
+}
+
+
 
 .main-container {
   display: flex;
@@ -18,7 +30,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  height: 80vh;
   width: 100%;
   max-width: 400px;
   box-sizing: border-box;
@@ -54,20 +66,20 @@
   pointer-events: none;
   font-size: small;
   color: #00dfc4;
-  /* background-color: white; */
   transition: 0.5s
-  
 }
 
-.input-field:focus+.place-holder {
+.input-field:focus+.place-holder,
+.input-field:not(:placeholder-shown)+.place-holder {
   color: #00dfc4;
   transform: translateY(-40px);
   border-left: 1px solid #00dfc4;
 }
+
 .send-token-button {
   border: none;
   padding: 9px 12px;
-  background:  #00a695;
+  background: #00a695;
   font-size: small;
   color: white;
   border-radius: 5px;
@@ -77,8 +89,18 @@
   background-color: #00dfc4;
 }
 
+.values-submitted {
+  color: #00dfc4;
+  font-size: large;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  border: 2px solid #00dfc4;
+  padding: 20px 20px;
+}
+
 .error-eth {
   color: red;
   font-size: small;
-
+  padding: 10px 10px;
 }
