@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Formik, Form, Field } from "formik";
 import { FormSchema } from "../schema/FormValidationSchema";
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+import PacmanLoader from "react-spinners/PacmanLoader";
 import "./FormStyle.css";
 
 const SolutionForm = () => {
@@ -10,6 +11,11 @@ const SolutionForm = () => {
   const [valuesSubmitted, setValuesSubmit] = useState(null);
 
   // const data = JSON.stringify(valuesSubmitted)
+
+  const returnClick = () => {
+    setIsSubmitted(false);
+    setValuesSubmit(null);
+  };
 
   return (
     <div className="main-container">
@@ -24,9 +30,17 @@ const SolutionForm = () => {
         </div>
       ) : isSubmitted ? (
         <div className="values-submitted">
-          <h1 className="title-success">Transaction Completed!</h1>
-          <p>You sent to eth address: {valuesSubmitted.ethAddress} </p>
-          <p>Amount: {valuesSubmitted.inputAmount} ETH</p>
+          <h1 className="title-style">Transaction Completed!</h1>
+          <p className="p-style">You sent to eth address:</p>
+          <span className="p-span-style">{valuesSubmitted.ethAddress} </span>
+          <p className="p-style">Amount:</p>
+          <span className="p-span-style">
+            {valuesSubmitted.inputAmount} ETH
+          </span>
+
+          <button className="form-button return-button" onClick={returnClick}>
+            RETURN
+          </button>
         </div>
       ) : (
         <Formik
@@ -43,12 +57,18 @@ const SolutionForm = () => {
               setIsSubmitted(true);
               setValuesSubmit(values);
               setIsLoading(false);
-            }, 5000);
+            }, 4000);
           }}
         >
           {({ errors, touched, isSubmitting, handleSubmit }) => (
             <Form onSubmit={handleSubmit}>
               <div className="form-container">
+                <PacmanLoader
+                  color={"#00dfc4"}
+                  size={30}
+                  aria-label="Loading Spinner"
+                  data-testid="loader"
+                />
                 <h1 className="app-title">Ethereum Mask</h1>
                 <div className="input-box">
                   <Field
@@ -90,7 +110,7 @@ const SolutionForm = () => {
                 <div className="input-box">
                   <button
                     type="submit"
-                    className="send-token-button"
+                    className="form-button send-token-button"
                     disabled={isSubmitting}
                   >
                     SEND TOKENS

@@ -1,5 +1,4 @@
 
-import './App.css';
 import SolutionForm from './component/SolutionForm';
 
 

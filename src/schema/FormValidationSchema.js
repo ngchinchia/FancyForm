@@ -12,6 +12,6 @@ export const FormSchema = Yup.object().shape({
     .positive("Amount must not be negative!")
     .required("Required"),
   otpAuthentication: Yup.string()
-    .matches(/^\d{6}$/, "OTP must be 6 digits!")
+    .matches(/^\s*\d{6}\s*$/, "OTP must be 6 digits!")
     .required("Required"),
 });

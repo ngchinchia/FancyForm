@@ -76,36 +76,62 @@ body {
   border-left: 1px solid #00dfc4;
 }
 
-.send-token-button {
+.form-button {
   border: none;
-  padding: 9px 12px;
   background: #00a695;
   font-size: small;
   color: white;
-  border-radius: 5px;
+  border-radius: 5px; 
+}
+.form-button:hover {
+ background-color: #00dfc4;
 }
 
-.send-token-button:hover {
-  background-color: #00dfc4;
+.send-token-button {
+  padding: 9px 12px; 
+}
+
+.return-button {
+  padding: 15px 40px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 30px;
+  
 }
 
 .values-submitted {
-  color: #00dfc4;
-  font-size: large;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-  border: 0.5px solid #00dfc4;
-  padding: 20px 20px;
   display: flex;
-  box-sizing: border-box;
   flex-direction: column;
-  height: 50vh;
+  height: 80vh;
   width: 50%;
+  max-width: 450px;
+  border-radius: 10px;
+  color: #00a695;
+  padding: 20px;
+  outline: 1px solid #00a695;
+  position: relative;
 }
 
 .error-eth {
   color: red;
   font-size: small;
   padding: 10px 10px;
+}
+
+.title-style {
+  width: 100%;
+  color: #00dfc4;
+  overflow-wrap: normal;
+}
+
+.p-style {
+  width: 100%;
+  overflow-wrap: break-word;
+  color: #00dfc4;
+}
+
+.p-span-style {
+  width: 100%;
+  overflow-wrap: break-word;
 }
