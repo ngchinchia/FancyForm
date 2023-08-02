@@ -80,7 +80,7 @@ body {
   border: none;
   background: #00a695;
   font-size: small;
-  color: white;
+  color: #e6e8e8;
   border-radius: 5px; 
 }
 .form-button:hover {
@@ -107,7 +107,7 @@ body {
   width: 50%;
   max-width: 450px;
   border-radius: 10px;
-  color: #00a695;
+  color: #e6e8e8;
   padding: 20px;
   outline: 1px solid #00a695;
   position: relative;
