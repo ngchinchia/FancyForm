@@ -31,12 +31,20 @@ const SolutionForm = () => {
       ) : isSubmitted ? (
         <div className="values-submitted">
           <h1 className="title-style">Transaction Completed!</h1>
-          <p className="p-style">You sent to eth address:</p>
-          <span className="p-span-style">{valuesSubmitted.ethAddress} </span>
-          <p className="p-style">Amount:</p>
-          <span className="p-span-style">
-            {valuesSubmitted.inputAmount} ETH
-          </span>
+          <div className="values-container">
+            <div className="values-box addr">
+              <p className="p-style">You sent to eth address:</p>
+              <span className="p-span-style">
+                {valuesSubmitted.ethAddress}{" "}
+              </span>
+            </div>
+            <div className="values-box">
+              <p className="p-style">Amount:</p>
+              <span className="p-span-style">
+                {valuesSubmitted.inputAmount} ETH
+              </span>
+            </div>
+          </div>
 
           <button className="form-button return-button" onClick={returnClick}>
             RETURN

@@ -81,14 +81,15 @@ body {
   background: #00a695;
   font-size: small;
   color: #e6e8e8;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
+
 .form-button:hover {
- background-color: #00dfc4;
+  background-color: #00dfc4;
 }
 
 .send-token-button {
-  padding: 9px 12px; 
+  padding: 9px 12px;
 }
 
 .return-button {
@@ -97,7 +98,7 @@ body {
   bottom: 0;
   right: 0;
   margin: 30px;
-  
+
 }
 
 .values-submitted {
@@ -109,7 +110,7 @@ body {
   border-radius: 10px;
   color: #e6e8e8;
   padding: 20px;
-  outline: 1px solid #00a695;
+  outline: 3px solid #00a695;
   position: relative;
 }
 
@@ -119,10 +120,30 @@ body {
   padding: 10px 10px;
 }
 
+.values-container {
+  outline: 1px solid #00a695;
+  border-radius: 10px;
+}
+
+.values-box {
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  height: 100px;
+  padding: 10px;
+}
+
+.addr {
+  display: inline-block;
+  overflow: hidden;
+  border-bottom: 1px solid #00a695;
+}
+
 .title-style {
   width: 100%;
   color: #00dfc4;
   overflow-wrap: normal;
+  padding: 10px;
 }
 
 .p-style {
